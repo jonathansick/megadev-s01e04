@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-10-31
 ---
 
 # Morning digest
@@ -77,3 +78,18 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Run log reader (`src/digest/`, types first) | — | claude-code · claude-fable-5-1 · high | 2026-10-31 |
+| 2 | Digest page: GET /digest/:night | #1 | claude-code · claude-sonnet-5-5 · medium | 2026-10-31 |
+| 3 | Digest JSON: GET /api/digest/:night | #1 | claude-code · claude-sonnet-5-5 · medium | 2026-10-31 |
+| 4 | Board links each night to its digest with counts | #1 | claude-code · claude-sonnet-5-5 · medium | 2026-10-31 |
+| 5 | Route tests for digest page and JSON | #1, #2, #3 | claude-code · claude-sonnet-5-5 · medium | 2026-10-31 |
+| 6 | Preview for review on GitHub Pages | #2, #4 | claude-code · claude-fable-5-1 · medium | 2026-10-31 |
+| 7 | Clean up: re-upload preview without marker, move plan to done | #6 + review | claude-code · claude-fable-5-1 · medium | 2026-10-31 |
+
+#6 was closed once before the reviewer looked and reopened; it closed for good when the review was in.
+The preview at https://jonathansick.github.io/megadev-s01e04/ was re-uploaded without the lane marker the same day (ADR 0003).
